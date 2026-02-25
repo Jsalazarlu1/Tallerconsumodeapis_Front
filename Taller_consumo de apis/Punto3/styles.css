@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* SEARCH */
+.search {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    background: #ff4b2b;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* AUTOCOMPLETE */
+.sugerencias {
+    list-style: none;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    max-height: 180px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.sugerencias li {
+    padding: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.sugerencias li:hover {
+    background: #f2f2f2;
+}
+
+/* RESULTADO */
+.card {
+    background: #f6f6f6;
+    border-radius: 15px;
+    padding: 20px;
+    animation: fadeIn 0.4s ease;
+}
+
+.card img {
+    width: 120px;
+}
+
+.card h2 {
+    text-transform: capitalize;
+}
+
+.types span {
+    background: #ff4b2b;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    margin: 0 3px;
+}
+
+.stats {
+    text-align: left;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
